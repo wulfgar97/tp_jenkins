@@ -1,0 +1,6 @@
+Config_jenkins.yaml
+__pycache__
+*.pyc
+venv
+*pyc
+Dockerfile
