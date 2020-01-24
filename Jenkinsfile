@@ -29,7 +29,7 @@ spec:
     - name: docker-sock
       hostPath:
         path: /var/run/docker.sock
-            """
+"""
     }
   }
 
@@ -42,11 +42,7 @@ spec:
         }
       }
     }
-  }
-
-}
-
-stage('Build image') {
+  stage('Build image') {
       steps {
         container('docker') {
           sh "docker build -t localhost:4000/pythontest:latest ."
@@ -63,3 +59,7 @@ stage('Deploy') {
         }
       }
     }
+  }
+
+}
+
