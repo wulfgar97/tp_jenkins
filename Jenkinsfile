@@ -54,3 +54,12 @@ stage('Build image') {
         }
       }
     }
+
+stage('Deploy') {
+      steps {
+        container('kubectl') {
+          sh "kubectl apply -f ./kubernetes/deployment.yaml"
+          sh "kubectl apply -f ./kubernetes/service.yaml"
+        }
+      }
+    }
